@@ -3,7 +3,7 @@ import css from './Filter.module.css';
 
 export function Filter({isFilter }) {
   const changeInput = e => {
-  	 isFilter(e.currentTarget.value)
+  	 isFilter(e.currentTarget.value.trim())
   };
   return (
     <div className={css.filter}>
