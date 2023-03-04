@@ -1,0 +1,14 @@
+.form{
+	display: flex;
+	flex-direction: column;
+}
+.input{
+	width: 150px;
+	margin: 10px 0;
+	font-size: 14px;
+	outline-color: cornflowerblue;
+}
+.btn{
+	display: block;
+	width: 100px;
+}

@@ -1,0 +1,16 @@
+.list{
+	list-style: inside;
+	list-style-type: disc;
+	padding-left: 0;
+	
+}
+.item{
+	align-items: center;
+	margin: 10px;
+}
+.btn{
+	display: inline-block;
+	width: 100px;
+	height: 20px;
+	margin-left: 20px;
+}
