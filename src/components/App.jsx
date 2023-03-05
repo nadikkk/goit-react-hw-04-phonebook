@@ -31,9 +31,9 @@ export function App() {
     setFilter(wordFilter.toLowerCase());
   };
 
-  const contactsAfterFiltr = contacts.filter(({ name }) =>
-    name.toLowerCase().includes(filter)
-  );
+  const contactsAfterFiltr = contacts.filter(({ name }) => {
+    return name.toLowerCase().includes(filter);
+  });
 
   return (
     <div className={css.app}>
@@ -42,7 +42,11 @@ export function App() {
 
       <h2>Contacts</h2>
       <Filter isFilter={isFilterContacts} />
-      <ContactList contacts={contactsAfterFiltr} isDelete={deleteContact} />
+      {contactsAfterFiltr.length === 0 ? (
+        <p>Not contacts</p>
+      ) : (
+        <ContactList contacts={contactsAfterFiltr} isDelete={deleteContact} />
+      )}
     </div>
   );
 }
